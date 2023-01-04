@@ -58,10 +58,12 @@
       <% end %>
   </tbody>
 </table>
-      <div> <%= form_with model: [@book, @book_comment] do |f| %>
-    <%= f.text_area :comment, rows: '5' %><br>
+  <div>
+    <%= form_with (model: [@book, @book_comment], local: ture) do |f| %>
+    <%= f.text_area :comment, rows: '5', placeholder: "コメントをここに" %><br>
     <%= f.submit "送信" %>
-  <% end %></div>
+    <% end %>
+  </div>
     </div>
   </div>
 </div>
