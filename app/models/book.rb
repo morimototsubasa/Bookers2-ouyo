@@ -5,6 +5,7 @@ class Book < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :book_comments, dependent: :destroy
   
+  
   def self.search_for(content, method)
     if method == 'perfect'
       Book.where(title: content)
