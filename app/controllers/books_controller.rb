@@ -48,6 +48,7 @@ before_action :correct_user, only: [:edit, :update]
     end
   end
 
+
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
